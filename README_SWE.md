@@ -1,4 +1,4 @@
-# Notes
+# Notes of Software Engineering
 
 ### 1. RESTful API: 
 * API stands for Application Programming Interface and it basically allows a piece of software to talk to another.
