@@ -10,8 +10,7 @@
   * _Stateless_: The server will not store anything about the latest HTTP request the client made. It will treat every request as new. No session, no history.
   * _Cacheable_: The caching of data and responses is of utmost importance wherever they are applicable/possible. Caching brings performance improvement for the client-side and better scope for scalability for a server because the load has reduced.
   * _Layered system_: REST allows you to use a layered system architecture where you deploy the APIs on server A, and store data on server B and authenticate requests in Server C, for example. A client cannot ordinarily tell whether it is connected directly to the end server or an intermediary along the way.
-  * _Code on demand (optional)_:
-
+  * _Code on demand (optional)_: Most of the time, you will be sending the static representations of resources in the form of XML or JSON. But when you need to, you are free to return executable code to support a part of your application.
 
 [Click to read more](https://github.com/Vuong-Chu/Notes/blob/main/Web%20API%20Design%20The%20Missing%20Link.pdf).
 
