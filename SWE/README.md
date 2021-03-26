@@ -12,6 +12,6 @@
   * __Layered system__: REST allows you to use a layered system architecture where you deploy the APIs on server A, and store data on server B and authenticate requests in Server C, for example. A client cannot ordinarily tell whether it is connected directly to the end server or an intermediary along the way.
   * __Code on demand (optional)__: Most of the time, you will be sending the static representations of resources in the form of XML or JSON. But when you need to, you are free to return executable code to support a part of your application.
 
-[Click to read more](https://github.com/Vuong-Chu/Notes/blob/main/Web%20API%20Design%20The%20Missing%20Link.pdf).
+[Click to read more](https://github.com/Vuong-Chu/Notes/blob/main/SWE/Web%20API%20Design%20The%20Missing%20Link.pdf).
 
 ### 2. Docker:
