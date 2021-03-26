@@ -6,7 +6,7 @@
 * REST is defined by 6 constraints: client-server, stateless, cacheable, layered system, uniform interface, code on demand:
 
 > + _Client–server_: Client application and server application MUST be able to evolve separately without any dependency on each other. A client should know only resource URIs while server should know only database and data on the server.
->- _Stateless_
+> - _Stateless_
 >- _Cacheable_:
 >- _Layered system_:
 >- _Uniform interface_:
