@@ -2,6 +2,4 @@
 
 ### 1. Probability
 
-\begin{equation}
-a^2 + b^2
-\end{equation}
+$\sum_{n=1}^{10} n^2$
