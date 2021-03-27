@@ -1,6 +1,7 @@
 # Notes on Quant Finance
 
 ### 1. Probability
-```math
-a^2+b^2=c^2
-```
+
+\begin{equation}
+a^2 + b^2
+\end{equation}
