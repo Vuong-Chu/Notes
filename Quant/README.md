@@ -1,5 +1,6 @@
 # Notes on Quant Finance
 
 ### 1. Probability
-
-<img src="http://yuml.me/diagram/scruffy/class/[<<IDisposable>>;UnitOfWork]">
+```math
+a^2+b^2=c^2
+```
