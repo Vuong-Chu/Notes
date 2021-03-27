@@ -2,4 +2,4 @@
 
 ### 1. Probability
 
-<img src="http://yuml.me/diagram/scruffy/class/[User|#counter;+Forename;+Surname;+HashedPassword;-Salt|+Login(user,pass);+Logout();+Register()]" >
+<img src="http://yuml.me/diagram/scruffy/class/[<<IDisposable>>;UnitOfWork]">
