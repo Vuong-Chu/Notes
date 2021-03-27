@@ -2,4 +2,4 @@
 
 ### 1. Probability
 
-\alpha
+$\alpha$
