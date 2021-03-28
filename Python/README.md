@@ -13,3 +13,9 @@ if __name__=="__main__":
   main()
 
 ```
+
+### 2. Python for econometrics
+
+```python
+
+```
