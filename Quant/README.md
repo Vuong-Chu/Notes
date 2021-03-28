@@ -8,11 +8,11 @@ Advances in telecommunications and computer technologies during the past decade 
   <img src="Algorithmic Trading.jpg" width="533" height="467">
 </p>
 
-* Pre-trade analysis: is the most common use of algorithms within a trading environment. It analyzes financial data or news with the aim of forecasting future price movement or volatility in order to emcompass any system that uses financial data or news to analyze certain properties of an asset.
+* __Pre-trade analysis__: is the most common use of algorithms within a trading environment. It analyzes financial data or news with the aim of forecasting future price movement or volatility in order to emcompass any system that uses financial data or news to analyze certain properties of an asset.
   * Alpha model: predicts the future behavior of the financial instruments to trade.
   * Risk model: evaluates the levels of exposure/risk associated with the financial instruments.
   * Transaction cost model: calculates the (potential) costs associated with trading the financial instruments.
-* Trading signal generation: takes as its inputs the results of the alpha, risk, and transaction cost models and decides what portfolio of financial instruments should be owned going forward and in what quantities.
+* __Trading signal generation__: takes as its inputs the results of the alpha, risk, and transaction cost models and decides what portfolio of financial instruments should be owned going forward and in what quantities.
   * Index fund rebalancing strategies: consists of the portfolio construction model. Index funds have defined periods of rebalancing to bring their holdings to par with their respective benchmark indices.
   * Mean reversion (Trading range): is based on the concept that the high and low prices of an asset are a temporary phenomenon that revert to their mean value (average value) periodically.
   * Momentum (Trend-following) strategies: follow trends in moving averages, channel breakouts, price level movements, and related technical indicators. These are the easiest and simplest strategies to implement through algorithmic trading because these strategies do not involve making any predictions or price forecasts.
@@ -23,9 +23,9 @@ Advances in telecommunications and computer technologies during the past decade 
   * Percentage of Volume: This algorithm continues sending partial orders according to the defined participation ratio and according to the volume traded in the markets.
   * Implementation shortfall strategy: Implementation shortfall is the sum of execution costs and the opportunity cost incurred in case of adverse market movement between the time of the trading decision and order execution, and is a form of slippage (slippage refers to the difference between the expected price of a trade and the price at which the trade is executed). Hence, implementation shortfall strategy aims at minimizing the execution cost of an order by trading off the real-time market, thereby saving on the cost of the order and benefiting from the opportunity cost of delayed execution.
   * Sniffing strategy: Uses the buy side of a large order. Such detection through algorithms will help the market maker identify large order opportunities and enable them to benefit by filling the orders at a higher price.
-* Trade execution: determines how best to execute the trade to minimize market impact and timing risk.
+* __Trade execution__: determines how best to execute the trade to minimize market impact and timing risk.
   * Execution model: executes the trades, making several decisions with constraints on (actual) transaction costs and trading duration. The most general decision is the trading strategy followed by the venue and order type.
-*  Post-trade analysis:
+*  __Post-trade analysis__: Evaluate the performance of the trade.
 
 Example: 
 Objective: replicate the FTSE 100 index by trading a subset of stocks (that is, not the entire index) that provides a similar performance to the index while minimizing the transaction costs naturally incurred when rebalancing any replicating portfolio. 
