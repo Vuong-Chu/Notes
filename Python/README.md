@@ -17,5 +17,10 @@ if __name__=="__main__":
 ### 2. Python for econometrics
 
 ```python
+import numpy as np
+import math
+from scipy import linalg, sparse
 
+%Matrix 2x3
+A
 ```
