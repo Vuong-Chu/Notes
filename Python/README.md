@@ -57,4 +57,39 @@ print(np.reshape(C.T,(2,3)).T) #Matlab reshape(C,3,2)
 print(np.tile(D,(2,2)))
 print(np.tile(np.reshape(A.T,(1,4)),(1,2)))
 print(np.reshape(np.tile(A.T,(1,2)),(1,8)))
+
+#Indexing matrix
+#Notes: Python counts from 0
+print(A.item(1,1)) #Pick 1 value
+print(A[1,1])      #Pick 1 value
+print(C[:,1])
+print(B[(0,2),:])  #Pick random rows
+print(B[0:2,:])    #Warnings 0:2 -> 2 first rows
+print(B[1:3,1])
+
+#Modyfying matrix variables
+A[1,1]=3
+print(A)
+B[1,:] = np.mat([[1,1]])
+print(B)
+print(C[:,1:]) #all except for first column
+print(C[:,2])  #last column
+print(C[:,:-1]) #all except for last column
+print(C[:,-1])  #last column
+
+#Creating variables from existing matrices and function
+print(np.concatenate((A,B),axis=0))
+print(np.concatenate((C,A),axis=1))
+print(np.mat(np.random.normal(0,1,(10,1))))
+print(np.mat(np.random.normal(3,10,(10,1))))
+print(np.cumsum(B,axis=0))
+print(np.diff(B,axis=0))
+print(np.diag(A))
+full_name = np.mat(["Chu","Nhat","Minh","Vuong"])
+print(full_name)
+list = [A,full_name,C]
+print(list)
+H = np.random.normal(0,1,(15,4))
+print(H)
+print(np.logical_and(H<1, H>0)) #Logical matrix
 ```
