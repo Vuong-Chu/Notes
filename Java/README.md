@@ -17,12 +17,33 @@ The Java EE specification defines the following Java EE components:
 
 * EJB components (enterprise beans) are business components that run on the server.
 
-Java EE Clients:
+**Java EE Clients**:
+* Web Clients: Dynamic webs and Web browsers. A web client is sometimes called a thin client. Thin clients usually do not query databases, execute complex business rules, or connect to legacy applications. When you use a thin client, such heavyweight operations are off-loaded to enterprise beans executing on the Java EE server, where they can leverage the security, speed, services, and reliability of Java EE server-side technologies.
+
+* Application Clients: An application client runs on a client machine and provides a way for users to handle tasks that require a richer user interface than can be provided by a markup language. Application clients directly access enterprise beans running in the business tier. However, if application requirements warrant it, an application client can open an HTTP connection to establish communication with a servlet running in the web tier. Application clients written in languages other than Java can interact with Java EE servers, enabling the Java EE platform to interoperate with legacy systems, clients, and non-Java languages.
+
+* Applets: A web page received from the web tier can include an embedded applet. Written in the Java programming language, an applet is a small client application that executes in the Java virtual machine installed in the web browser.
+
+* Javabean Component Archietecture: The server and client tiers might also include components based on the JavaBeans component architecture (JavaBeans components) to manage the data flow between the following:
+
+ * An application client or applet and components running on the Java EE server
+
+ * Server components and a database
+
+JavaBeans components are not considered Java EE components by the Java EE specification. JavaBeans components have properties and have get and set methods for accessing those properties. JavaBeans components used in this way are typically simple in design and implementation but should conform to the naming and design conventions outlined in the JavaBeans component architecture.
+* Java Server Communications: The client communicates with the business tier running on the Java EE server either directly or, as in the case of a client running in a browser, by going through web pages or servlets running in the web tier.
   
-Web Components:
+**Web Components**: 
+Java EE web components are either servlets or web pages created using JavaServer Faces technology and/or JSP technology (JSP pages). 
 
-Business Components:
+* Servlets are Java programming language classes that dynamically process requests and construct responses. 
+* JSP pages are text-based documents that execute as servlets but allow a more natural approach to creating static content. 
+* JavaServer Faces technology builds on servlets and JSP technology and provides a user interface component framework for web applications.
 
-Enterpise Information System Tier:
+**Business Components**:
+Business code, which is logic that solves or meets the needs of a particular business domain such as banking, retail, or finance, is handled by enterprise beans running in either the business tier or the web tier.
+
+**Enterpise Information System Tier**:
+The enterprise information system tier handles EIS software and includes enterprise infrastructure systems, such as enterprise resource planning (ERP), mainframe transaction processing, database systems, and other legacy information systems.
 
 #### 2. JavaSE
