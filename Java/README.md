@@ -68,4 +68,20 @@ Container types:
   <img src="javaeett_dt_005.png" width="513" height="537">
 </p>
 
+#### 1.3. Web Services Support
+Web services are web-based enterprise applications that use open, XML-based standards and transport protocols to exchange data with calling clients. To write web services and clients with the Java EE XML APIs, all you need to do is pass parameter data to the method calls and process the data returned; for document-oriented web services, you send documents containing the service data back and forth. The translation of data to a standardized XML-based data stream is what makes web services and clients written with the Java EE XML APIs fully interoperable.
+
+* XML: Extensible Markup Language (XML) is a cross-platform, extensible, text-based standard for representing data.
+
+* SOAP Transport Protocol: Client requests and web service responses are transmitted as Simple Object Access Protocol (SOAP) messages over HTTP to enable a completely interoperable exchange between clients and web services, all running on different platforms and at various locations on the Internet. HTTP is a familiar request-and-response standard for sending messages over the Internet, and SOAP is an XML-based protocol that follows the HTTP request-and-response model.
+
+The SOAP portion of a transported message does the following:
+
+ * Defines an XML-based envelope to describe what is in the message and explain how to process the message.
+
+ * Includes XML-based encoding rules to express instances of application-defined data types within the message.
+
+ * Defines an XML-based convention for representing the request to the remote service and the resulting response.
+
+
 #### 2. JavaSE
