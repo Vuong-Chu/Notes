@@ -27,9 +27,9 @@ The Java EE specification defines the following Java EE components:
 
 * Javabean Component Archietecture: The server and client tiers might also include components based on the JavaBeans component architecture (JavaBeans components) to manage the data flow between the following:
 
- * An application client or applet and components running on the Java EE server
+  * An application client or applet and components running on the Java EE server.
 
- * Server components and a database
+  * Server components and a database.
 
 JavaBeans components are not considered Java EE components by the Java EE specification. JavaBeans components have properties and have get and set methods for accessing those properties. JavaBeans components used in this way are typically simple in design and implementation but should conform to the naming and design conventions outlined in the JavaBeans component architecture.
 * Java Server Communications: The client communicates with the business tier running on the Java EE server either directly or, as in the case of a client running in a browser, by going through web pages or servlets running in the web tier.
@@ -75,11 +75,89 @@ Web services are web-based enterprise applications that use open, XML-based stan
 
 * SOAP Transport Protocol: Client requests and web service responses are transmitted as Simple Object Access Protocol (SOAP) messages over HTTP to enable a completely interoperable exchange between clients and web services, all running on different platforms and at various locations on the Internet. HTTP is a familiar request-and-response standard for sending messages over the Internet, and SOAP is an XML-based protocol that follows the HTTP request-and-response model. The SOAP portion of a transported message does the following:
 
- * Defines an XML-based envelope to describe what is in the message and explain how to process the message.
+  * Defines an XML-based envelope to describe what is in the message and explain how to process the message.
 
- * Includes XML-based encoding rules to express instances of application-defined data types within the message.
+  * Includes XML-based encoding rules to express instances of application-defined data types within the message.
 
- * Defines an XML-based convention for representing the request to the remote service and the resulting response.
+  * Defines an XML-based convention for representing the request to the remote service and the resulting response.
+
+* WSDL Standard Format: The Web Services Description Language (WSDL) is a standardized XML format for describing network services. The description includes the name of the service, the location of the service, and ways to communicate with the service. WSDL service descriptions can be published on the Web.
+
+#### 1.4. Java EE APIs
+Enterprise JavaBeans Technology: An Enterprise JavaBeans (EJB) component, or enterprise bean, is a body of code that has fields and methods to implement modules of business logic. Enterprise beans either session beans or message-driven beans:
+
+* A session bean represents a transient conversation with a client. When the client finishes executing, the session bean and its data are gone.
+* A message-driven bean combines features of a session bean and a message listener, allowing a business component to receive messages asynchronously. Commonly, these are Java Message Service (JMS) messages.
+
+Java Servlet Technology: Java Servlet technology lets you define HTTP-specific servlet classes. A servlet class extends the capabilities of servers that host applications accessed by way of a request-response programming model.
+
+JavaServer Faces Technology: JavaServer Faces technology is a user interface framework for building web applications. The main components of JavaServer Faces technology are as follows:
+* A GUI component framework.
+* A flexible model for rendering components in different kinds of HTML or different markup languages and technologies.
+* A standard RenderKit for generating HTML 4.01 markup.
+
+JavaServer Pages Technology: JavaServer Pages (JSP) technology lets you put snippets of servlet code directly into a text-based document.
+
+JavaServer Pages Standard Tag Library: The JavaServer Pages Standard Tag Library (JSTL) encapsulates core functionality common to many JSP applications. This standardization allows you to deploy your applications on any JSP container that supports JSTL and makes it more likely that the implementation of the tags is optimized.
+
+Java Persistence API: The Java Persistence API (JPA) is a Java standards–based solution for persistence. Persistence uses an object/relational mapping approach to bridge the gap between an object-oriented model and a relational database.
+
+Java Transaction API: The Java Transaction API (JTA) provides a standard interface for demarcating transactions. The Java EE architecture provides a default auto commit to handle transaction commits and rollbacks. An auto commit means that any other applications that are viewing data will see the updated data after each database read or write operation. However, if your application performs two separate database access operations that depend on each other, you will want to use the JTA API to demarcate where the entire transaction, including both operations, begins, rolls back, and commits.
+
+Java API for RESTful Web Services: APIs for the development of web services built according to the Representational State Transfer (REST) architectural style. A JAX-RS application is a web application that consists of classes packaged as a servlet in a WAR file along with required libraries.
+
+Managed Beans: These are lightweight container-managed objects (POJOs) with minimal requirements, support a small set of basic services, such as resource injection, lifecycle callbacks, and interceptors. Managed Beans represent a generalization of the managed beans specified by JavaServer Faces technology and can be used anywhere in a Java EE application, not just in web modules.
+
+Contexts and Dependency Injection for Java EE: Contexts and Dependency Injection for Java EE (CDI) defines a set of contextual services, provided by Java EE containers, that make it easy for developers to use enterprise beans along with JavaServer Faces technology in web applications. In other hand, Dependency Injection for Java defines a standard set of annotations (and one interface) for use on injectable classes.
+
+Bean Validation: The Bean Validation specification defines a metadata model and API for validating data in JavaBeans components. Instead of distributing validation of data over several layers, such as the browser and the server side, you can define the validation constraints in one place and share them across the different layers.
+
+Java Message Service API: The Java Message Service (JMS) API is a messaging standard that allows Java EE application components to create, send, receive, and read messages. It enables distributed communication that is loosely coupled, reliable, and asynchronous.
+
+Java EE Connector Architecture: The Java EE Connector Architecture is used by tools vendors and system integrators to create resource adapters that support access to enterprise information systems that can be plugged in to any Java EE product.
+
+JavaMail API: Java EE applications use the JavaMail API to send email notifications. The JavaMail API has two parts:
+
+* An application-level interface used by the application components to send mail
+
+* A service provider interface
+
+Java Authorization Contract for Containers: The Java Authorization Contract for Containers (JACC) specification defines a contract between a Java EE application server and an authorization policy provider. All Java EE containers support this contract.
+
+Java Authentication Service Provider Interface for Containers: The Java Authentication Service Provider Interface for Containers (JASPIC) specification defines a service provider interface (SPI) by which authentication providers that implement message authentication mechanisms may be integrated in client or server message-processing containers or runtimes. Authentication providers integrated through this interface operate on network messages provided to them by their calling containers. The authentication providers transform outgoing messages so that the source of each message can be authenticated by the receiving container, and the recipient of the message can be authenticated by the message sender. Authentication providers authenticate each incoming message and return to their calling containers the identity established as a result of the message authentication.
+
+Java EE Security API: The Java EE Security API specification defines portable, plug-in interfaces for HTTP authentication and identity stores, and an injectable SecurityContext interface that provides an API for programmatic security.
+
+Java API for WebSocket: WebSocket is an application protocol that provides full-duplex communications between two peers over TCP. The Java API for WebSocket enables Java EE applications to create endpoints using annotations that specify the configuration parameters of the endpoint and designate its lifecycle callback methods.
+
+Java API for JSON Processing: JavaScript Object Notation (JSON) is a text-based data exchange format derived from JavaScript that is used in web services and other connected applications. The Java API for JSON Processing (JSON-P) enables Java EE applications to parse, transform, and query JSON data using the object model or the streaming model.
+
+Java API for JSON Binding: The Java API for JSON Binding (JSON-B) provides a binding layer for converting Java objects to and from JSON messages. JSON-B also supports the ability to customize the default mapping process used in this binding layer through the use of Java annotations for a given field, JavaBean property, type or package, or by providing an implementation of a property naming strategy.
+
+Concurrency Utilities for Java EE: Concurrency Utilities for Java EE is a standard API for providing asynchronous capabilities to Java EE application components through the following types of objects: managed executor service, managed scheduled executor service, managed thread factory, and context service.
+
+Batch Applications for the Java Platform: Batch jobs are tasks that can be executed without user interaction. The Batch Applications for the Java Platform specification is a batch framework that provides support for creating and running batch jobs in Java applications.
+
+Java Database Connectivity API: The Java Database Connectivity (JDBC) API lets you invoke SQL commands from Java programming language methods. You use the JDBC API in an enterprise bean when you have a session bean access the database. You can also use the JDBC API from a servlet or a JSP page to access the database directly without going through an enterprise bean.
+
+Java Naming and Directory Interface API: The Java Naming and Directory Interface (JNDI) API provides naming and directory functionality, enabling applications to access multiple naming and directory services, such as LDAP, DNS, and NIS. The JNDI API provides applications with methods for performing standard directory operations, such as associating attributes with objects and searching for objects using their attributes. Using JNDI, a Java EE application can store and retrieve any type of named Java object, allowing Java EE applications to coexist with many legacy applications and systems.
+
+JavaBeans Activation Framework: The JavaBeans Activation Framework (JAF) is used by the JavaMail API. JAF provides standard services to determine the type of an arbitrary piece of data, encapsulate access to it, discover the operations available on it, and create the appropriate JavaBeans component to perform those operations.
+
+Java API for XML Processing: The Java API for XML Processing (JAXP), part of the Java SE platform, supports the processing of XML documents using Document Object Model (DOM), Simple API for XML (SAX), and Extensible Stylesheet Language Transformations (XSLT). JAXP enables applications to parse and transform XML documents independently of a particular XML-processing implementation.
+
+Java Architecture for XML Binding: The Java Architecture for XML Binding (JAXB) provides a convenient way to bind an XML schema to a representation in Java language programs. JAXB can be used independently or in combination with JAX-WS, in which case it provides a standard data binding for web service messages. All Java EE application client containers, web containers, and EJB containers support the JAXB API.
+
+Java API for XML Web Services: The Java API for XML Web Services (JAX-WS) specification provides support for web services that use the JAXB API for binding XML data to Java objects. The JAX-WS specification defines client APIs for accessing web services as well as techniques for implementing web service endpoints.
+
+SOAP with Attachments API for Java: The SOAP with Attachments API for Java (SAAJ) is a low-level API on which JAX-WS depends. SAAJ enables the production and consumption of messages that conform to the SOAP 1.1 and 1.2 specifications and the SOAP with Attachments note. Most developers do not use the SAAJ API, instead using the higher-level JAX-WS API.
+
+Java Authentication and Authorization Service: The Java Authentication and Authorization Service (JAAS) provides a way for a Java EE application to authenticate and authorize a specific user or group of users to run it.
+
+Common Annotations for the Java Platform: Annotations enable a declarative style of programming in the Java platform.
+
+
+
 
 
 #### 2. JavaSE
