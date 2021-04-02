@@ -1,6 +1,7 @@
 # Notes on Java
 
-#### 1. JavaEE
+### 1. JavaEE
+#### 1.1. Distributed Multitiered Applications
 The aim of the Java EE platform is to provide developers with a powerful set of APIs while shortening development time, reducing application complexity, and improving application performance.
 
 The Java EE platform uses a simplified programming model. A developer can simply enter the information as an annotation directly into a Java source file, and the Java EE server will configure the component at deployment and runtime. These annotations are generally used to embed in a program data that would otherwise be furnished in a deployment descriptor. With annotations, you put the specification information in your code next to the program element affected.
@@ -47,7 +48,24 @@ Business code, which is logic that solves or meets the needs of a particular bus
 The enterprise information system tier handles EIS software and includes enterprise infrastructure systems, such as enterprise resource planning (ERP), mainframe transaction processing, database systems, and other legacy information systems.
 
 <p align="center">
-  <img src="javaeett.png" width="513" height="537">
+  <img src="javaeett_dt_004.png" width="513" height="537">
+</p>
+#### 1.2. Java EE Containers
+Containers are the interface between a component and the low-level, platform-specific functionality that supports the component. Before it can be executed, a web, enterprise bean, or application client component must be assembled into a Java EE module and deployed into its container.
+
+Container types:
+* Java EE server: The runtime portion of a Java EE product. A Java EE server provides EJB and web containers.
+
+* EJB container: Manages the execution of enterprise beans for Java EE applications. Enterprise beans and their container run on the Java EE server.
+
+* Web container: Manages the execution of web pages, servlets, and some EJB components for Java EE applications. Web components and their container run on the Java EE server.
+
+* Application client container: Manages the execution of application client components. Application clients and their container run on the client.
+
+* Applet container: Manages the execution of applets. Consists of a web browser and a Java Plug-in running on the client together.
+
+<p align="center">
+  <img src="javaeett_dt_005.png" width="513" height="537">
 </p>
 
 #### 2. JavaSE
