@@ -73,9 +73,7 @@ Web services are web-based enterprise applications that use open, XML-based stan
 
 * XML: Extensible Markup Language (XML) is a cross-platform, extensible, text-based standard for representing data.
 
-* SOAP Transport Protocol: Client requests and web service responses are transmitted as Simple Object Access Protocol (SOAP) messages over HTTP to enable a completely interoperable exchange between clients and web services, all running on different platforms and at various locations on the Internet. HTTP is a familiar request-and-response standard for sending messages over the Internet, and SOAP is an XML-based protocol that follows the HTTP request-and-response model.
-
-The SOAP portion of a transported message does the following:
+* SOAP Transport Protocol: Client requests and web service responses are transmitted as Simple Object Access Protocol (SOAP) messages over HTTP to enable a completely interoperable exchange between clients and web services, all running on different platforms and at various locations on the Internet. HTTP is a familiar request-and-response standard for sending messages over the Internet, and SOAP is an XML-based protocol that follows the HTTP request-and-response model. The SOAP portion of a transported message does the following:
 
  * Defines an XML-based envelope to describe what is in the message and explain how to process the message.
 
