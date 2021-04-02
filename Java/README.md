@@ -11,11 +11,11 @@ Java EE applications are made up of components. A Java EE component is a self-co
 
 The Java EE specification defines the following Java EE components:
 
-++ Application clients and applets are components that run on the client.
+* Application clients and applets are components that run on the client.
 
-++ Java Servlet, JavaServer Faces, and JavaServer Pages (JSP) technology components are web components that run on the server.
+* Java Servlet, JavaServer Faces, and JavaServer Pages (JSP) technology components are web components that run on the server.
 
-++ EJB components (enterprise beans) are business components that run on the server.
+* EJB components (enterprise beans) are business components that run on the server.
 
 Java EE Clients:
   
