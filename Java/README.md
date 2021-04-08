@@ -168,7 +168,7 @@ Types of binding:
 
  ** Fluent API:
  
-    ```ruby
+    ```
     //Area = Side x Side
     IntegerProperty Area = new SimpleIntegerProperty();
     IntegerProperty Side = new SimpleIntegerProperty();
@@ -177,7 +177,7 @@ Types of binding:
     
  ** Binding class:
  
-     ```java
+     ```
     //Area = Side x Side
     IntegerProperty Area = new SimpleIntegerProperty();
     IntegerProperty Side = new SimpleIntegerProperty();
@@ -187,7 +187,7 @@ Types of binding:
     
 ** Low level:
 
-    ```java
+    ```
     IntegerProperty Side = new SimpleIntegerProperty();
     IntegerBinding Area = new IntegerBinding(){
       {
