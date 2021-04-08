@@ -161,3 +161,37 @@ Common Annotations for the Java Platform: Annotations enable a declarative style
 
 
 #### 2. JavaSE
+##### 2.1 JavaFX
+Types of binding:
+
+** High level:
+ ** Fluent API: 
+    ```java
+    //Area = Side x Side
+    IntegerProperty Area = new SimpleIntegerProperty();
+    IntegerProperty Side = new SimpleIntegerProperty();
+    Area.bind(Side.multiply(Side));
+    ```
+ ** Binding class:
+     ```java
+    //Area = Side x Side
+    IntegerProperty Area = new SimpleIntegerProperty();
+    IntegerProperty Side = new SimpleIntegerProperty();
+    NumberBinding squareBinding = Bindings.multiply(Side,Side);
+    Area.bind(squareBinding);
+    ```
+** Low level:
+    ```java
+    IntegerProperty Side = new SimpleIntegerProperty();
+    IntegerBinding Area = new IntegerBinding(){
+      {
+      super.bind(Area);
+      }
+      @Overide
+      protected int computeValue(){
+        return Side.get() * Side.get();
+      }
+    };
+ 
+    ```
+
