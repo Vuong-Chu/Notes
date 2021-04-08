@@ -165,14 +165,18 @@ Common Annotations for the Java Platform: Annotations enable a declarative style
 Types of binding:
 
 ** High level:
- ** Fluent API: 
+
+ ** Fluent API:
+ 
     ```java
     //Area = Side x Side
     IntegerProperty Area = new SimpleIntegerProperty();
     IntegerProperty Side = new SimpleIntegerProperty();
     Area.bind(Side.multiply(Side));
     ```
+    
  ** Binding class:
+ 
      ```java
     //Area = Side x Side
     IntegerProperty Area = new SimpleIntegerProperty();
@@ -180,7 +184,9 @@ Types of binding:
     NumberBinding squareBinding = Bindings.multiply(Side,Side);
     Area.bind(squareBinding);
     ```
+    
 ** Low level:
+
     ```java
     IntegerProperty Side = new SimpleIntegerProperty();
     IntegerBinding Area = new IntegerBinding(){
@@ -192,6 +198,5 @@ Types of binding:
         return Side.get() * Side.get();
       }
     };
- 
     ```
 
