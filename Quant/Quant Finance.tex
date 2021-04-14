@@ -13,7 +13,7 @@
 \documentclass[11pt]{article}
 
     \usepackage{tcolorbox}
-    
+    \usepackage{bm}
     \usepackage[T1]{fontenc}
     % Nicer default font (+ math font) than Computer Modern for most use cases
     \usepackage{mathpazo}
@@ -302,11 +302,68 @@ set of all events is known as the event space.\\
 
 \textit{Definition 1.8:} A probability space is denoted using the tuple $(\Omega,\mathcal{F},Pr)$ where $\Omega$ is the sample space, $\mathcal{F}$ is the event space and $Pr$ is the probability set function which has domain $\omega \in \mathcal{F}$ and range $Pr(\omega) \in [0,1]$.\\
 
+\textit{Definition 1.:} Let $(\Omega, \mathcal{F}, P)$ be a probability space. If $X:\Omega \rightarrow R^n$ is a real-value vector function having its domain the elements of $\Omega$, then $X:\Omega \rightarrow R^n$ is called a (multivariate) n-dimensional random variable.\\
+
+\textit{Definition 1.:} A multivariate random variable is said to be continuous if its range is uncountably infinite and if there exists a non-negative valued function $f(x_1,...,x_n)$ defined for all $(x_1,...,x_n) \in R^n$ such that for any event $B \subset R(X)$,
+$Pr(B) = \int...\int_{\{x_1,...x_n\} \in B} f(x_1,...,x_n)dx_1...dx_n$ and $f(x_1,...,x_n)=0$ for all $(x_1,...,x_n) \notin R(X)$.
+
+\textit{Definition 1.:} A function $f:R^n \rightarrow R$ is a member of the class of multivariate continuous density function if and only if $f(x_1,...,x_n) \geq 0$ for all $x \in R^n$ and $\int_{-\infty}^{\infty}...\int_{-\infty}^{\infty} f(x_1,...,x_n)dx_1...dx_n = 1$. 
 
 \subsection{Expectation}
 \subsection{Generating functions}
-\subsection{Branching process}
-\subsection{Markov chains}
+\subsection{Convergence of Random Variables}
+\begin{itemize}
+	\item Sure Convergence: $X_n \rightarrow X$ surely, written $X_n \xrightarrow{\text{s}} X$, if $\{\omega \in \Omega: \lim_{n \rightarrow \infty}X_n(\omega)=X(\omega)\}$.
+	\item Almost Sure Convergence (Strong Convergence): $X_n \rightarrow X$ almost surely, written $X_n \xrightarrow{\text{a.s}} X$, if $\{\omega \in \Omega: \lim_{n \rightarrow \infty}X_n(\omega)=X(\omega)\}$ is an event whose probability is 1.
+	\item Convergence in Quadratic Mean (Convergence in $L^p$): $X_n \rightarrow X$ in r\textit{th} mean, where $r \geq 1$, written $X_n \xrightarrow{\text{r}} X, if E|X_n^r| < \infty$ for all $n$ and $\lim_{n \rightarrow \infty} E(|X_n-X|^r) = 0$.
+	\item Convergence in Probability (Convergence in Measure): $X_n \rightarrow X$ in probability, written $X_n \xrightarrow{\text{P}} X$, if $\lim_{n \rightarrow \infty} P(|X_n-X|>\epsilon) = 0$.
+	\item Convergence in Distribution (Weak Convergence): $X_n \rightarrow X$ in distribution, written $X_n \xrightarrow{\text{D}} X$, if $\lim_{n \rightarrow \infty} P(X_n \leq x) = P(X \leq x)$ for all points $x$ at which the function $F_X(x) = P(X \leq x) is continuous$.
+\end{itemize}
+Note $X$ is random or not random.\\
+\textbf{Implications}:\\
+$(X_n \xrightarrow{\text{s}} X) \Rightarrow (X_n \xrightarrow{\text{a.s}} X) \Rightarrow (X_n \xrightarrow{\text{P}} X) \Rightarrow (X_n \xrightarrow{\text{D}} X)$.\\
+$(X_n \xrightarrow{\text{r}} X) \Rightarrow (X_n \xrightarrow{\text{P}} X) \Rightarrow (X_n \xrightarrow{\text{D}} X)$.\\
+\textbf{Continuous mapping theorem}: Let $X_n \xrightarrow{\text{d}} X$ and let the random variable $g(X)$ be define by a function $g(x)$ that is continuous everywhere except possibly on a set with zero probability. Then, $g(X_n) \xrightarrow{\text{d}} g(X)$.\\
+$\bm{o_p}$: A sequence of random vector $x_n$ is said to be $o_p(1)$ if it converges to 0 in probability. Furthermore, $x_n$ is said to be $o_p(r_n)$ if $\frac{x_n}{r_n} \xrightarrow{P} 0$.\\
+$\bm{O_p}$: A sequence of random vector $x_n$ is said to be $o_p(1)$ if it is bounded in probability. Furthermore, $x_n$ is said to be $O_p(r_n)$ if $\frac{x_n}{r_n} \xrightarrow{P} 0$. In there, a sequence of random variables $x_n$ is bounded in probability if for any $\epsilon > 0$, there exist M and N such that $P(|x_n|>M)<\epsilon$ for all $n>N$.\\
+\textbf{Theorem}: For $a \leq b:$
+\begin{eqnarray*}
+&O_p(1) + O_p(1) = O_p(1)\\
+&o_p(1) + o_p(1) = o_p(1)\\
+&o_p(1) + O_p(1) = O_p(1)\\
+&O_p(1)O_p(1) = O_p(1)\\
+&O_p(1)o_p(1) = o_p(1)\\
+&\{1+o_p(1)\}^-1 = O_p(1)\\
+&O_p\{O_p(1)\} = O_p(1)\\
+&o_p\{O_p(1)\} = o_p(1)\\
+&o_p(r_n) = r_no_p(1)\\
+&O_p(r_n) = r_no_p(1)\\
+&O_p(n^a) + O_p(n^b) = O_p(n^b)\\
+&o_p(n^a) + o_p(n^b) = o_p(n^b)\\
+\end{eqnarray*}
+
+\subsection{Stochastic process in Discrete time}
+Stochastic process is a collection of random variables, indexed by an ordered time parameter,$\{X_0,X_1,X_2,...\}$ all defined on the same probability space.
+
+Our aims are to describe the changes in $(X_n)$ over time, to say what can be said about $(X_m+n), (n>0)$ when we have information on $(X_0,...,X_m)$ to assess the limiting behavior of the process over long period.
+
+Let $a = {p_i : i=0,1,2,...}$ is a sequence, so the probability generating function of sequence a is the function $G_a$ defined by $G_a(s) = \sum_{i=0}^{\infty} p_is^i$ for $s \in R$ for which the sum converges.
+
+The convolution of the real sequences $a = {a_i:i \geq 0}$ and $b = {b_i:i \geq 0}$ is the sequence $c = {c_i:i \geq 0}$ defined by $c_n=a_0b_n+a_1b_{n-1}+...+a_nb_0$. We can write $c = a*b$. If a and b have generating function $G_a$ and $G_b$, then the generating function of c is
+
+
+\subsubsection{Branching process}
+\textit{Definition 1.5.:} Let $G_n(s)$ is the generating function of $Z_n$, which is the random variable in the $n^{th}$ generation. With $m > n, Z_{m+n} = Z_1 + Z_2 +...+Z_m$. Hence, $G_m(G_n(s)) = G_n(G_m(s))$, and thus $G_n(s)=G(G(...(G(s))...))$ is the n-fold of $G$.\\
+\textit{Definition 1.5.:} If $E(Z_1) = \mu$ and $var(Z_1) = \sigma^2$, then the mean and variance of the random variable in $n{th}$ generation are: $E(X_n)=\mu^n, Var(X_n)=\sigma^2\mu^(n-1)(1+\mu+\mu^2+...+\mu^{n-1})$. Hence, if $\mu \neq 1,$ then $Var(X_n) = \sigma^2\mu^{n-1}(\mu^n-1)/(\mu-1)$ and if $\mu = 1$, then $Var(X_n)=n\sigma^2$.\\
+\textit{Definition 1.5.:} As $n \rightarrow \infty, P(Z_n=0) \rightarrow P(\text{ultimate extinction}) = \eta$, where $\eta$ is the smallest non-negative root of the equation $s = G(s)$. Also $\eta = 1$ if $\mu < 1$, and $\eta < 1$ if $\mu > 1$. If $\mu = 1$ then $\eta = 1$, so long as the family size distribution has strictly positive variance.\\
+\textit{Definition 1.5.:} Let $Y_n = X_n|X_n \neq 0$ be the population size, conditional on non-extinction. $E(Y_n^r) = E(X_n^r)/P(X_n \neq 0)$. When n is large, $P(X_n \neq 0) \approx (1-x)$, which implies that $E(Y_n) \approx E(X_n)/(1-x)$ and $Var(Y_n) \approx Var(X_n)/(1-x) - x(E(X_n))^2/(1-x)^2$.\\
+Notes: A branching process becomes extinct precisely in generation n is $p_n = x_n - x_{n-1}$, with $x_0 = 0$.
+\subsubsection{Random walk}
+\textit{Definition 1.5.:} Let $X_n$ is a independent random variable with $P(X_n=1) = p$ and $P(X_n=-1) = q = 1-p$, and let $S_0=0, S_n=X_1+...+X_n$ for $n \geq 1.$ The values $(S_n)$ are said to form a simple random walk; it is symmetrical if $p=q=1/2$. In other words, random walks are Bernoulli process with $p=1=1/2$.\\
+Random walk have two properties:\\
+- Time homogeneity: $P(S_{m+n}=b|S_n=a) = P(S_{m+r}=b|S_r=a)$.\\
+- Space homogeneity: $P(S_{m+n}=a|S_n=0) = P(S_{m+n}=a+b|S_n=b)$.\\
+\subsubsection{Markov chains}
 
 \section{Real Analysis}
 \subsection{Sets and Functions}
@@ -415,6 +472,34 @@ We can use symbol such as: $\sum x_n$\\
 
 
 \section{Differential Equation}
+
+\section{Stochastic Calculus}
+
+\section{Financial Economics}
+Rate of return (Simple rate):\\
+$R_t = P_t/P_{t-1}-1$\\
+Continuous compounded rate:\\
+$R_{ct} = ln(P_t/P_{t-1})$ or $R_{ct} = ln(1+R_t)$\\
+If $R_t$ is m-period rate, then $R_c = mln(1+R/m)$\\
+Arithmetic average return:\\
+$\bar{R}=(R_1+R_2+...+R_n)/n \rightarrow$ arithmetic average return compounded: $R_1+R_2+...+R_n$\\
+Geometric average return:\\
+$\bar{R}_g=\sqrt[n]{(1+R_1)(1+R_2)...(1+R_n)}$\\
+$\rightarrow$ geometric average return compounded: $(1+R_1)(1+R_2)...(1+R_n)$\\
+Hence, $ ln(P_n/P_0) = R_{c1}+R_{c2}+...+R_{cn} = nln(1 + \bar{R}_g)$\\
+If returns are serially uncorrelated, $R_t = \mu + \epsilon_t$ with $\epsilon_t ~ iid(0, \sigma^2)$, then the arithmetic average is the best return forecast for any randomly selected future year. Over long holding periods, the best forecast would also use the arithmetic average return compounded, that is, $(1 + \bar{R})^n$. if the sequence is repeated, returns are negatively serially correlated.  forecasting over long horizons requires the use of the geometric average return compounded, $(1 + \bar{R}_g)^n$. There is evidence that over long horizons stock returns are ‘mildly’ mean reverting (i.e. exhibit some negative serial correlation) so that the arithmetic average overstates expected future returns, and it may be better to use the geometric average as a forecast of future average returns.\\
+Real price: $P_0^r = P_0/P^g_0$, where $P^g$ is price index for goods and services.\\
+Real return:
+$1+R^r = (1+R)P_0^g/P_1^g = (1+R)/(1+\pi)$ where $P_1^g/P_0^g = 1 + \pi$ and $\pi$ is inflation rate of goods price.\\
+Nominal wealth in domestic currency: $W_1 = W_0(1+R^{fr})S_1/S_0$\\
+Real return of foreign investment in term of purchasing power over domestic goods:\\
+$W_1^r = (W_0^r P_0^g)(1+R^fr)S_1/P_1^gS_0$.
+if relative PPP (Purchasing Power Parity) holds, the real return to foreign investment is equal to the real local currency return. and the change in the exchange
+rate is immaterial. This is because, under relative PPP, the exchange rate alters to just
+offset the differential inflation rate between the two countries. As relative PPP holds
+only over horizons of 5–10 years, the real return to foreign investment over shorter
+horizons will depend on exchange rate changes.
+
 
 
 
