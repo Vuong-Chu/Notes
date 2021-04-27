@@ -5,4 +5,11 @@ Links for interview:
 - [Git & Github](https://vn.got-it.ai/blog/git-va-github-lieu-ban-da-that-su-biet-cach-su-dung)
 - [CV](https://vn.got-it.ai/blog/cau-hoi-thuong-gap-khi-phong-van-software-engineer-o-got-it)
 
+Links for Java quant:
+[Strata](http://strata.opengamma.io/) - Modern open-source analytics and market risk library designed and written in Java.
+[JQuantLib](http://www.jquantlib.org/) - JQuantLib is a free, open-source, comprehensive framework for quantitative finance, written in 100% Java.
+[finmath.net](http://finmath.net/) - Java library with algorithms and methodologies related to mathematical finance.
+[quantcomponents](https://github.com/lsgro/quantcomponents) - Free Java components for Quantitative Finance and Algorithmic Trading.
+[DRIP](https://lakshmidrip.github.io/DRIP) - Fixed Income, Asset Allocation, Transaction Cost Analysis, XVA Metrics Libraries.
+
 Thanks for Github's [Markdown Cheatsheat](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
