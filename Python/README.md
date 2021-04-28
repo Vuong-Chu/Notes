@@ -99,4 +99,7 @@ Stock_Price = pd.read_excel(r'C:\Users\minhv\Desktop\Python Projects\PFE Toolbox
 pd.DataFrame(Stock_Price)
 Stock_Price['dates'] = pd.to_datetime(Stock_Price['dates']-719529,unit='D') #Convert datestring
 Stock_Price.head(5)
+pd.to_datetime('2013-10-28') in Stock_Price['dates'].values
+Stock_Price.loc[Stock_Price['dates']=='2013-10-28']
+Stock_Price.loc[(Stock_Price['dates']=='2013-10-28') | (Stock_Price['dates']=='2013-10-31')] //Select multiple conditions
 ```
