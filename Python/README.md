@@ -18,6 +18,7 @@ if __name__=="__main__":
 
 ```python
 import numpy as np
+import pandas as pd
 import math
 from scipy import linalg, sparse
 
@@ -92,4 +93,10 @@ print(list)
 H = np.random.normal(0,1,(15,4))
 print(H)
 print(np.logical_and(H<1, H>0)) #Logical matrix
+
+#Creating variables from existing matrices and function
+Stock_Price = pd.read_excel(r'C:\Users\minhv\Desktop\Python Projects\PFE Toolbox\Stock Price.xlsx')
+pd.DataFrame(Stock_Price)
+Stock_Price['dates'] = pd.to_datetime(Stock_Price['dates']-719529,unit='D') #Convert datestring
+Stock_Price.head(5)
 ```
