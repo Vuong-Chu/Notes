@@ -94,12 +94,21 @@ H = np.random.normal(0,1,(15,4))
 print(H)
 print(np.logical_and(H<1, H>0)) #Logical matrix
 
-#Creating variables from existing matrices and function
+#Import and basic financial transformation
 Stock_Price = pd.read_excel(r'C:\Users\minhv\Desktop\Python Projects\PFE Toolbox\Stock Price.xlsx')
 pd.DataFrame(Stock_Price)
 Stock_Price['dates'] = pd.to_datetime(Stock_Price['dates']-719529,unit='D') #Convert datestring
 Stock_Price.head(5)
 pd.to_datetime('2013-10-28') in Stock_Price['dates'].values
 Stock_Price.loc[Stock_Price['dates']=='2013-10-28']
-Stock_Price.loc[(Stock_Price['dates']=='2013-10-28') | (Stock_Price['dates']=='2013-10-31')] //Select multiple conditions
+x = Stock_Price.loc[(Stock_Price['dates']=='2013-10-28') | (Stock_Price['dates']=='2013-10-31')] #Select multiple conditions
+x.iloc[:,0:2]
+Stock_Price.loc[(Stock_Price['dates'].dt.month==1) & (Stock_Price['dates'].dt.year==2014)] #Select specific month
+xt = Stock_Price["apple_price"].iloc[1:,].to_frame()
+xt_1 = Stock_Price["apple_price"].iloc[0:-1,].to_frame()
+RoR = (np.divide(xt,xt_1))-1
+RoR.rename(columns={"apple_price":"apple_ror"},inplace=True)
+print("{0:.5%}".format(RoR["apple_ror"].mean()))
+RoR.loc[(RoR["dates"].dt.year==2014)]["apple_ror"].var()
+RoR.loc[(RoR["dates"].dt.year==2015)]["apple_ror"].max()
 ```
