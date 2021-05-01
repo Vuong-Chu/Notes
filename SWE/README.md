@@ -15,3 +15,20 @@
 [Click to read more](https://github.com/Vuong-Chu/Notes/blob/main/SWE/Web%20API%20Design%20The%20Missing%20Link.pdf).
 
 ### 2. Docker:
+- The machine on which Docker is installed and running is usually referred to as a Docker Host. whenever you plan to deploy an application on the host, it would create a logical entity on it to host that application. In Docker terminology, we call this logical entity a Container or Docker Container to be more precise. Docker builds containers for you containing everything required to run the code. A Docker Container doesn’t have any operating system installed and running on it. But it would have a virtual copy of the process table, network interface(s), and the file system mount point(s). These have been inherited from the operating system of the host on which the container is hosted and running. This allows each container to be isolated from the other present on the same host.
+- Docker would virtualize the operating system of the host on which it is installed and running, rather than virtualizing the hardware components. So, applications with different operating system requirements cannot be hosted together on the same Docker Host. For example, let’s say we have 4 different applications, out of which 3 applications require a Linux-based operating system and the other application requires a Windows-based operating system. In such a scenario, the 3 applications that require Linux-based operating system can be hosted on a single Docker Host, whereas the application that requires a Windows-based operating system needs to be hosted on a different Docker Host.
+- Core component of Docker
+ * Docker Engine is one of the core components of Docker. It is responsible for the overall functioning of the Docker platform. It includes:
+  *  Server: Server runs a daemon known as __dockerd (Docker Daemon)__, which is nothing but a process. It is responsible for creating and managing Docker Images, Containers, Networks and Volumes on the Docker platform.
+  *  REST API: REST API specifies how the applications can interact with the Server, and instruct it to get their job done.
+  *  Client: a command line interface, that allows users to interact with Docker using the commands.
+- Docker terminology
+ * Docker Image is a template that contains the application, and all the dependencies required to run that application on Docker.
+ * Docker Container is a logical entity. In more precise terms, it is a running instance of the Docker Image.
+ * Docker Hub is the official online repository where you could find all the Docker Images that are available for us to use. It also allows us to store and distribute our custom images as well if we wish to do so. We could also make them either public or private, based on our requirements.
+- Docker syntax
+ * docker create [options] IMAGE [commands] [arguments]
+ * docker start [options] CONTAINER ID/NAME [CONTAINER ID/NAME…]
+ * docker rm [options] CONTAINER ID/NAME [CONTAINER ID/NAME...]
+ * docker rmi [options] IMAGE NAME/ID [IMAGE NAME/ID...]
+ Anything enclosed within the square brackets is optional. This is applicable to all the commands that you would see on this guide.
