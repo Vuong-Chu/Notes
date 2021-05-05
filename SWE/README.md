@@ -41,16 +41,16 @@ __Docker syntax__
  * docker logs CONTAINER ID/NAME (To keep output of containers)
  * docker run --memory/--cpu-share (To limit resources for running a container)
  * docker run -rm -ti -p xxx:xxxx -p yyyy:yyyy --name SERVER NAME ubuntu:14.04 bash (expose fixed ports)
-  *  nc -lp xxxx | nc -lp yyyy (lp-listen on port)
-  *  nc localhost xxxx
-  *  nc host.docker.internal xxxx
+   *  nc -lp xxxx | nc -lp yyyy (lp-listen on port)
+   *  nc localhost xxxx
+   *  nc host.docker.internal xxxx
  * docker run -rm -ti -p xxx -p yyyy --name SERVER NAME ubuntu:14.04 bash (expose dynamic ports)
  * docker port SERVER NAME
-  * nc -lp xxxx | nc -lp yyyy (lp-listen on port)
-  * nc local host zzzz
+   * nc -lp xxxx | nc -lp yyyy (lp-listen on port)
+   * nc local host zzzz
  * docker run -rm -ti -net learning --name SERVER NAME
-  * nc -lp xxxx
-  * nc SERVER NAME xxxx
+   * nc -lp xxxx
+   * nc SERVER NAME xxxx
  * docker network connect SERVER NAME1 SERVER NAME2
  Anything enclosed within the square brackets is optional. This is applicable to all the commands that you would see on this guide.
  Notes: Don't let containers fetch depenencies when they start. Don't leave important things in unnamed and stopped containers.
