@@ -37,7 +37,7 @@ __Docker syntax__
  * docker run --rm -ti ubuntu:latest bash (Run and automatically remove container after exit)
  * docker run -d -ti ubuntu:latest bash (Run a container under the background)/docker attach IMAGE ID/NAME (Recall a container under the background)
  * docker exec -ti IMAGE ID/NAME (Run more things in a container)
- * docker commit IMAGE NAME/ID (Create an image from container)
+ * docker commit IMAGE NAME/ID[:tags] (Create an image from container)
  * docker logs CONTAINER ID/NAME (To keep output of containers)
  * docker run --memory/--cpu-share (To limit resources for running a container)
  * docker run -rm -ti -p xxx:xxxx -p yyyy:yyyy --name SERVER NAME ubuntu:14.04 bash (expose fixed ports)
