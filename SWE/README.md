@@ -27,11 +27,33 @@ __Docker terminology__
  * Docker Container is a logical entity. In more precise terms, it is a running instance of the Docker Image.
  * Docker Hub is the official online repository where you could find all the Docker Images that are available for us to use. It also allows us to store and distribute our custom images as well if we wish to do so. We could also make them either public or private, based on our requirements.
 __Docker syntax__
- * docker create [options] IMAGE [commands] [arguments]
- * docker start [options] CONTAINER ID/NAME [CONTAINER ID/NAME…]
- * docker rm [options] CONTAINER ID/NAME [CONTAINER ID/NAME...]
- * docker rmi [options] IMAGE NAME/ID [IMAGE NAME/ID...]
+ * docker create [options] IMAGE [commands] [arguments] (Create an image)
+ * docker start [options] CONTAINER ID/NAME [CONTAINER ID/NAME…] (Start a container)
+ * docker kill [options] CONTAINER ID/NAME [CONTAINER ID/NAME…] (Stop a container)
+ * docker rm [options] CONTAINER ID/NAME [CONTAINER ID/NAME...] (Remove a container)
+ * docker rmi [options] IMAGE NAME/ID [IMAGE NAME/ID...] (Remove image)
+ * docker ps -a/--format $FORMAT/-l --format=$FORMAT (View info)
+ * docker run -ti ubuntu:latest bash (Run an image => creating an instance of the image, which is a container)
+ * docker run --rm -ti ubuntu:latest bash (Run and automatically remove container after exit)
+ * docker run -d -ti ubuntu:latest bash (Run a container under the background)/docker attach IMAGE ID/NAME (Recall a container under the background)
+ * docker exec -ti IMAGE ID/NAME (Run more things in a container)
+ * docker commit IMAGE NAME/ID (Create an image from container)
+ * docker logs CONTAINER ID/NAME (To keep output of containers)
+ * docker run --memory/--cpu-share (To limit resources for running a container)
+ * docker run -rm -ti -p xxx:xxxx -p yyyy:yyyy --name SERVER NAME ubuntu:14.04 bash (expose fixed ports)
+  *  nc -lp xxxx | nc -lp yyyy (lp-listen on port)
+  *  nc localhost xxxx
+  *  nc host.docker.internal xxxx
+ * docker run -rm -ti -p xxx -p yyyy --name SERVER NAME ubuntu:14.04 bash (expose dynamic ports)
+ * docker port SERVER NAME
+  * nc -lp xxxx | nc -lp yyyy (lp-listen on port)
+  * nc local host zzzz
+ * docker run -rm -ti -net learning --name SERVER NAME
+  * nc -lp xxxx
+  * nc SERVER NAME xxxx
+ * docker network connect SERVER NAME1 SERVER NAME2
  Anything enclosed within the square brackets is optional. This is applicable to all the commands that you would see on this guide.
+ Notes: Don't let containers fetch depenencies when they start. Don't leave important things in unnamed and stopped containers.
  ### 3. Maven:
  Maven is a powerful build tool for Java software projects. A build tool is a tool that automates everything related to building the software project. Building a software project typically includes one or more of these activities:
   * Generating source code.
@@ -56,6 +78,9 @@ Unless your project is small, your project may need external Java APIs or framew
 Maven Repositories: Maven repositories are directories of packaged JAR files with extra meta data. The meta data are POM files describing the projects each packaged JAR file belongs to, including what external dependencies each packaged JAR has. This meta data enables Maven to download dependencies of your dependencies recursively, until the whole tree of dependencies is download and put into your local repository. A __local repository__ is a directory on the developer's computer. This repository will contain all the dependencies Maven downloads. The same Maven repository is typically used for several different projects. By default Maven puts your local repository inside your user home directory on your local computer. However, you can change the location of the local repository by setting the directory inside your Maven settings file. Your Maven settings file is also located in your user-home/.m2 directory and is called settings.xml. But, for more convinience, we can update setting Maven in Intellij. The __central Maven__ repository is a repository provided by the Maven community. By default Maven looks in this central repository for any dependencies needed but not found in your local repository. Maven then downloads these dependencies into your local repository. You need no special configuration to access the central repository. A __remote repository__ is a repository on a web server from which Maven can download dependencies, just like the central repository. A remote repository can be located anywhere on the internet, or inside a local network. A remote repository is often used for hosting projects internal to your organization, which are shared by multiple projects. You can configure a remote repository in the POM file. Put the following XML elements right after the <dependencies> element.
  
 Maven can build a Fat JAR from your Java project. A Fat JAR is a single JAR file that contains all the compiled Java classes from your project, and all compiled Java classes from all JAR files your project depends on. You can package your microservice and all of its dependencies into a single JAR file. This makes execution much easier, because you don't have to list all the JAR files your microservice depends on, on the classpath. Fat JARs are also handy if you need to package your application inside a Docker container. Instead of having to add each JAR file your application depends on to the Docker container, you only have to add the Fat JAR of our application.
+
+ ### 4. Linux:
+ 
 ```
 ```
 
