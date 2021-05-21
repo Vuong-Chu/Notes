@@ -44,5 +44,7 @@ that the market’s price reflects all relevant information, technical analysis 
 #### 3. Quantitative analysis
 Quantitative analysis treats asset prices as random and uses mathematical and statistical analysis to find a suitable model for describing this randomness. Quantitative analysis is generally related to the pricing of derivative products, whose fair value relies on the underlying asset’s stochastic property as well as the analysis of the temporal convergence and divergence of price movements of pairs and baskets of assets.
 
-###2. Miscellany
-The price of Moria Mining stock is $100. During each of the next two six-month periods, the price may either rise by 25% or fall by 20% (equivalent to a standard deviation of 31.5% a year). At month 6 the company will pay a dividend of $20. The interest rate is 10% per six-month period. What is the value of a one-year American call option with an exercise price of $80? Now recalculate the option value, assuming that the dividend is equal to 20% of the with-dividend stock price.
+### 2. Miscellany
+
+1. The price of Moria Mining stock is $100. During each of the next two six-month periods, the price may either rise by 25% or fall by 20% (equivalent to a standard deviation of 31.5% a year). At month 6 the company will pay a dividend of $20. The interest rate is 10% per six-month period. What is the value of a one-year American call option with an exercise price of $80? Now recalculate the option value, assuming that the dividend is equal to 20% of the with-dividend stock price.
+2. Kalma filter: It is an iterative mathematical process that uses a set of equations and consecutive data inputs to quickly estimate the true value when the measured values contain unpredicted or random error, and uncertainty. 
