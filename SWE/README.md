@@ -83,5 +83,8 @@ Maven can build a Fat JAR from your Java project. A Fat JAR is a single JAR file
  
 ```
 ```
-
+ ### 5. Concurrency:
+<p align="center">
+  <img src="threadmodel.png" width="900" height="467">
+</p>
   
