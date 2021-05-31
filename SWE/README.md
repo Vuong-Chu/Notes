@@ -88,3 +88,5 @@ Maven can build a Fat JAR from your Java project. A Fat JAR is a single JAR file
   <img src="threadmodel.png" width="900" height="467">
 </p>
   
+ ### 6. Design Patterns: are established general solutions to commonly occurring software development problem.
+  __Singleton pattern__
