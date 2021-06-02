@@ -91,7 +91,15 @@ Maven can build a Fat JAR from your Java project. A Fat JAR is a single JAR file
  ### 6. Design Patterns: 
 
 __Design Patterns__ are established general solutions to commonly occurring software development problem.
+ 
 __Singleton pattern__ is a creational pattern focused on creating only one instance of an object in memory within an application, sharable by all classes and threads within the application. The globally available object created by the singleton pattern is referred to as a singleton.
+ 
 __Immutable Object pattern__ is a creational pattern based on the idea of creating objects whose state does not change after they are created and can be easily shared across multiple classes.
+ 
  __Builder pattern__ is a creational pattern in which parameters are passed to a builder object often through method chaining, and an object is generated with a final build call. It is often used with immutable objects, since immutable objects do not have setter methods and must be created with all of their parameter set, although it can be used with mutable objects as well.
+ 
  __Factory pattern__ is a creational pattern based on the idea of using a factory class to produce instances of objects based on a set of input parameters. It is similar to the builder pattern, although it is focused on supporting class polymorphism.
+ 
+ ### 7. Networking:
+ 
+
