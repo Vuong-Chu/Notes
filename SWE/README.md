@@ -100,6 +100,18 @@ __Immutable Object pattern__ is a creational pattern based on the idea of creati
  
  __Factory pattern__ is a creational pattern based on the idea of using a factory class to produce instances of objects based on a set of input parameters. It is similar to the builder pattern, although it is focused on supporting class polymorphism.
  
- ### 7. Networking:
+### 7. Networking:
+ 
+### 8. Spring Framework:
+ 
+"Spring" means different things in different contexts. The Spring Framework is divided into modules.
+ 
+* Inversion of control (IOC): The basic concept of the Dependency Injection (or Inversion of Control) is that, programmer do not need to create the objects, instead just describe how it should be created. No need to directly connect your components and services together in program, instead just describe which services are needed by which components in a configuration file/xml file. The Spring IOC container is then responsible for binding it all up. So, it has some benefits as below:
+ 
+  * Ensures configuration and uses of services are separate.
+  * Can switch implementations by just changing configuration.
+  * Enhances Testability as mock dependencies can be injected.
+  * Dependencies can be easily identified.
+  * No need to read code to see what dependencies your code talks to.
  
 
