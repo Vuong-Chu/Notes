@@ -12,4 +12,10 @@ This note is to summarize everything I feel hard to understand in Econometrics, 
 - [quantcomponents](https://github.com/lsgro/quantcomponents) - Free Java components for Quantitative Finance and Algorithmic Trading.
 - [DRIP](https://lakshmidrip.github.io/DRIP) - Fixed Income, Asset Allocation, Transaction Cost Analysis, XVA Metrics Libraries.
 
+**Power BI**
+- To connect Power BI with Google Drive
+- Take the [FILE_ID] from sharing file to __Anyone with the link__ and replace it into the link below
+https://docs.google.com/uc?id=[FILE_ID]&export=download
+- Copy the modified link to Get Data from Web in Power BI.
+
 Thanks for Github's [Markdown Cheatsheat](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
