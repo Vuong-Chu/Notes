@@ -48,3 +48,8 @@ Quantitative analysis treats asset prices as random and uses mathematical and st
 
 1. The price of Moria Mining stock is $100. During each of the next two six-month periods, the price may either rise by 25% or fall by 20% (equivalent to a standard deviation of 31.5% a year). At month 6 the company will pay a dividend of $20. The interest rate is 10% per six-month period. What is the value of a one-year American call option with an exercise price of $80? Now recalculate the option value, assuming that the dividend is equal to 20% of the with-dividend stock price.
 2. Kalma filter: It is an iterative mathematical process that uses a set of equations and consecutive data inputs to quickly estimate the true value when the measured values contain unpredicted or random error, and uncertainty. 
+
+### 3. Black-Scholes Model
+<p align="center">
+  <img src=Black Scholes Model.jpg" width="900" height="467">
+</p>
