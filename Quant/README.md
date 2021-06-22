@@ -51,11 +51,11 @@ Quantitative analysis treats asset prices as random and uses mathematical and st
 
 ### 3. Black-Scholes Model
 <p align="center">
-  <img src= "Black Scholes Model.jpg" width="900" height="467">
+  <img src= "Black Scholes Model.jpg" width="850" height="467">
 </p>
 
 
 ### 4. Diffusion Process
 <p align="center">
-  <img src= "Diffusion Process.jpg" width="900" height="467">
+  <img src= "Diffusion Process.jpg" width="900" height="450">
 </p>
