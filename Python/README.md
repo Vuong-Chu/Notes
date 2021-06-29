@@ -95,7 +95,7 @@ print(H)
 print(np.logical_and(H<1, H>0)) #Logical matrix
 
 #Import and basic financial transformation
-Stock_Price = pd.read_excel(r'C:\Users\minhv\Desktop\Python Projects\PFE Toolbox\Stock Price.xlsx')
+Stock_Price = pd.read_excel(r'C:\Stock Price.xlsx')
 pd.DataFrame(Stock_Price)
 Stock_Price['dates'] = pd.to_datetime(Stock_Price['dates']-719529,unit='D') #Convert datestring
 Stock_Price.head(5)
