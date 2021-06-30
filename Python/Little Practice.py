@@ -10,7 +10,7 @@ import numpy as np
 from sklearn.preprocessing import scale
 from sklearn.decomposition import PCA
 
-data = pd.read_csv("C:\\Users\\minhv\\Practice\\b5.csv")
+data = pd.read_csv("C:\\Users\\b5.csv")
 
 X = data.values
 scaled_X = scale(X)
@@ -28,7 +28,7 @@ Factor_score_coefficient = pca5.components_
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, linkage
 
-states = pd.read_csv("C:\\Users\\minhv\\Practice\\ClusterData.csv")
+states = pd.read_csv("C:\\Users\\ClusterData.csv")
 states.index = states.iloc[:,1]
 z = linkage(states.iloc[:,2:],"ward")
 index = states.iloc[:,1]
@@ -47,7 +47,7 @@ plt.show()
 import pylab as pl
 from sklearn.neighbors import KNeighborsClassifier
 
-data = pd.read_csv("C:\\Users\\minhv\\Practice\\ccdefault.csv")
+data = pd.read_csv("C:\\Users\\ccdefault.csv")
 ccd = data.iloc[:,1:]
 np.random.seed(123456)
 test_index = np.random.uniform(0,1,len(ccd)) >= 0.333
@@ -67,7 +67,7 @@ print("Neighbors: {0:d}, Accuracy: {1:2.2f}".format(n,accurate))
 from sklearn.svm import OneClassSVM
 from sklearn.covariance import EllipticEnvelope
 
-data = pd.read_csv("C:\\Users\\minhv\\Practice\\AnomalyData.csv")
+data = pd.read_csv("C:\\AnomalyData.csv")
 state_code = data["state_code"]
 data = data.loc[:,"data science":"Openness"]
 
@@ -93,7 +93,7 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-data = pd.read_csv("C:\\Users\\minhv\\Practice\\winequality-red.csv")
+data = pd.read_csv("C:\\Users\\winequality-red.csv")
 
 x = data.loc[:,:"alcohol"]
 y = data["quality"]
