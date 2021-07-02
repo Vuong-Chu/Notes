@@ -11,6 +11,8 @@ This note is to summarize everything I feel hard to understand in Econometrics, 
 - [finmath.net](http://finmath.net/) - Java library with algorithms and methodologies related to mathematical finance.
 - [quantcomponents](https://github.com/lsgro/quantcomponents) - Free Java components for Quantitative Finance and Algorithmic Trading.
 - [DRIP](https://lakshmidrip.github.io/DRIP) - Fixed Income, Asset Allocation, Transaction Cost Analysis, XVA Metrics Libraries.
+- [Colt](https://dst.lbl.gov/ACSSoftware/colt/) - Scientific Computing in Java.
+- [EJML](http://ejml.org/) - for manipulating real/complex/dense/sparse matrices in Java.
 
 **Power BI**
 - To connect Power BI with Google Drive
