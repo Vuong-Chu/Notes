@@ -1,0 +1,4 @@
+1. Run Maven package
+2. Edit Configuration (Tomcat run)
+  2.1 Check url: http://localhost:8080/...
+  2.2 Deployment: Add war file
