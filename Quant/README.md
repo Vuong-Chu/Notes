@@ -57,7 +57,7 @@ Quantitative analysis treats asset prices as random and uses mathematical and st
 
 ### 4. Diffusion Process
 <p align="center">
-  <img src= "Diffusion Process.jpg" width="800" height="450">
+  <img src= "Diffusion Process.jpg" width="400" height="450">
 </p>
 
 ### 5. Simulation n correlated random variables
