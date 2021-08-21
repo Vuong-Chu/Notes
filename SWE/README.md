@@ -118,4 +118,6 @@ __Immutable Object pattern__ is a creational pattern based on the idea of creati
  
 A web server is computer software and underlying hardware that accepts requests via HTTP, the network protocol created to distribute web pages, or its secure variant HTTPS. It delivers static web content—e.g., HTML pages, files, images, video—primarily in response to hypertext transfer protocol (HTTP) requests from a web browser. An application server is a server that hosts applications. It typically can deliver web content too, but its primary job is to enable interaction between end-user clients and server-side application code—the code representing what is often called business logic—to generate and deliver dynamic content, such as transaction results, decision support, or real-time analytics. In other words, a web server exclusively handles HTTP requests, whereas an application server serves business logic to application programs through any number of protocols. Most of the increasingly rich applications you use today feature a combination of static web content and dynamic application content, delivered via a combination of web server and application server technologies.
  
+### 10. KMP Algorithm
+ [See link](https://youtu.be/5i7oKodCRJo)
 
