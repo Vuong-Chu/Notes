@@ -112,3 +112,10 @@ print("{0:.5%}".format(RoR["apple_ror"].mean()))
 RoR.loc[(RoR["dates"].dt.year==2014)]["apple_ror"].var()
 RoR.loc[(RoR["dates"].dt.year==2015)]["apple_ror"].max()
 ```
+### 3. Sentiment analysis
+Step by step:
+* Gather data
+* Preprocess
+* Tokenize
+* POS tag
+* Scoring
