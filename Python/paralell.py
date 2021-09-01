@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jul 15 17:42:00 2021
-
 @author: minhv
 """
 
@@ -13,7 +12,8 @@ def f(x):
 if __name__ == '__main__':
     with Pool(5) as p:
         print(p.map(f, range(1000)))
-        
+
+################################################################################
 # importing the multiprocessing module
 import multiprocessing
   
@@ -46,3 +46,19 @@ if __name__ == "__main__":
   
     # both processes finished
     print("Done!")
+
+################################################################################
+import multiprocessing
+
+def f(n):
+    for i in range(1000):
+        for j in range(1000):
+            s = i*j
+    return n
+    
+if __name__=='__main__':
+    pool = multiprocessing.Pool(processes=4)
+    print(pool.map(f,range(10)))
+    pool.close()
+    pool.join()
+    print("Done")
