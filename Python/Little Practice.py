@@ -109,6 +109,7 @@ lasso.fit(x_train, y_train)
 svr = SVR(C=8, epsilon=0.2, gamma=0.5)
 svr.fit(x_train, y_train)
 
+#To limit a value
 y_pred_lasso = np.round(np.clip(lasso.predict(x_test),1,10)).astype(int)
 MAE_lasso = np.round(1 - mean_absolute_error(y_test, y_pred_lasso)/y_test.std(),2)
 
