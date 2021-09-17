@@ -67,7 +67,7 @@ Quantitative analysis treats asset prices as random and uses mathematical and st
 
 ### 6.
 <p align="center">
-  <img src= "Ito Lemma.png" width="600" height="350">
+  <img src= "Ito Lemma.png" width="700" height="350">
 </p>
 
 
